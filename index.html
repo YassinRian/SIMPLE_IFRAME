@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>IFRAME Yassin</h1>
+      <input type="text" /> <button>Opslaan</button>
+      <h3 id="input_waarde"></h3>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $("button").click(function() {
+          var input_waarde = $("input").val();
+          document.getElementById("input_waarde").innerHTML = input_waarde;
+          localStorage.setItem("input", input_waarde);
+        });
+      });
+    </script>
+  </body>
+</html>
